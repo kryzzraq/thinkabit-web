@@ -10,16 +10,16 @@
         <div class="menu-button"></div>
       </label>
       <ul class="menu">
-        <li>Home</li>
-        <li>Our client</li>
-        <li>About us</li>
-        <li>Feedback</li>
-        <li>Contact</li>
+        <li><a href="#section-home">Home</a></li>
+        <li><a>Our client</a></li>
+        <li><a>About us</a></li>
+        <li><a>Feedback</a></li>
+        <li><a>Contact</a></li>
       </ul>
     </section>
   </header>
   <main>
-    <section class="section-home">
+    <section class="section-home" id="section-home">
       <div class="section-home__box1">
         <h1 class="section-home__box1--title">A Digital Product Agency</h1>
         <div class="section-home__box1--info">
@@ -33,7 +33,6 @@
           src="./assets/images/ornaments/grey-dots.png"
         />
         <div class="section-home__box1--blue-circle"></div>
-
       </div>
       <div class="section-home__box2">
         <img

@@ -21,8 +21,20 @@ body,
       display: inline-block;
       font-size: 16px;
       cursor: pointer;
+      
+      a {
+        text-decoration: none;
 
-      &:hover {
+        &:active {
+          color: #2639ED;
+        }
+
+        &:visited {
+          color: black;
+        }
+      }
+
+      &:hover, &:active {
         color: #2639ED;
       }
     }
