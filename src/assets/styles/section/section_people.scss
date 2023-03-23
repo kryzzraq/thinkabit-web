@@ -1,0 +1,90 @@
+.section-people {
+    padding: 7em 0 0 7.25em;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    height: auto;
+
+    &__box1 {
+
+        &--header {
+            text-align: center;
+            &--title {
+                font-size: 2.5em;
+            }
+
+            &--info {
+                font-size: 18px;
+                color: #757575;
+            }
+        }
+
+        &--content {
+            display: flex;
+            padding-top: 100px;
+
+            &--1 {
+                position: relative;
+
+                &--photo{
+                    max-width: 400px;
+                    border-radius: 300px 0 300px 300px;
+                    filter: drop-shadow(10px 20px 50px rgba(0, 0, 0, 0.15));
+                }
+
+                &--pink_shape {
+                    position: absolute;
+                    bottom: 0px;
+                    left: 0;
+                    z-index: -4;
+        
+                    border: 8px solid #FF007A;
+                    width: 120px;
+                    height: 120px;
+                    border-radius: 100%;            
+                }
+
+                &--dots_ornaments {
+                    position: absolute;
+                    top: -40px;
+                    right: -40px;
+                    z-index: -4;
+        
+                }
+            }
+
+            &--2 {
+                padding: 70px 30px 0 60px;
+
+                &--title{
+                    font-size: 24px;
+                }
+
+                &--info {
+                    padding-top: 18px;
+                    color: #565656;
+                    font-size: 16px;
+                }
+            }
+
+            &--3 {
+                padding: 0 70px 0 50px;
+                position: relative;
+
+                &--orange_shape{
+                    position: absolute;
+                    bottom: 115px;
+                    left: 70px;
+                    z-index: -1;
+
+                    width: 184px;
+                    height: 184px;
+                    background: #FFF5DB;
+                    border-radius: 100%;
+                }
+            }
+        }
+    }
+}

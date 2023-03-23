@@ -166,7 +166,6 @@
           <span class="section-feedback__box1--button-play"></span>
         </button>
         <div class="section-feedback__box1--orange_shape"></div>
-
       </div>
       <div class="section-feedback__box2">
         <h1 class="section-feedback__box2--title">
@@ -179,6 +178,45 @@
           idea accordingly their budgets and according thir reuirements..
         </div>
         <div class="section-feedback__box2--blue_shape"></div>
+      </div>
+    </section>
+    <section class="section-people">
+      <div class="section-people__box1">
+        <div class="section-people__box1--header">
+          <h1 class="section-people__box1--header--title">
+            What our happy client say
+          </h1>
+          <div class="section-people__box1--header--info">
+            Several selected clients, who already believe in our service.
+          </div>
+        </div>
+        <div class="section-people__box1--content">
+          <div class="section-people__box1--content--1">
+            <img
+              class="section-people__box1--content--1--photo"
+              src="./assets/images/people/guy3.jpg"
+            />
+            <div class="section-people__box1--content--1--pink_shape"></div>
+            <img
+              class="section-people__box1--content--1--dots_ornaments"
+              src="./assets/images/ornaments/grey-dots-small.png"
+            />
+          </div>
+          <div class="section-people__box1--content--2">
+            <h4 class="section-people__box1--content--2--title">
+              Matthew Paul
+            </h4>
+            <div class="section-people__box1--content--2--info">
+              Perfect, very good job! Thank you for the amazing design and work.
+              Really impressed with the high quality and quick turnaround time.
+              Highly recommend.
+            </div>
+          </div>
+          <div class="section-people__box1--content--3">
+            <img src="./assets/images/people/people.png" />
+            <div class="section-people__box1--content--3--orange_shape"></div>
+          </div>
+        </div>
       </div>
     </section>
     <section class="section-contact" id="section-contact">
