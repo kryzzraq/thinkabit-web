@@ -149,7 +149,37 @@
       />
     </section>
     <section class="section-feedback" id="section-feedback">
-      What our happy client say
+      <div class="section-feedback__box1">
+        <video
+          id="video"
+          width="650"
+          height="350"
+          muted
+          src="https://www.intermarkit.es/recursos/media/portal/2017/04/21/video-home.mp4"
+          poster="./assets/images/people/briefing1.jpg"
+        ></video>
+        <button
+          class="section-feedback__box1--button"
+          v-if="!is_playing"
+          @click="playVideo()"
+        >
+          <span class="section-feedback__box1--button-play"></span>
+        </button>
+        <div class="section-feedback__box1--orange_shape"></div>
+
+      </div>
+      <div class="section-feedback__box2">
+        <h1 class="section-feedback__box2--title">
+          Great Digital Product Agency since 2016
+        </h1>
+        <div class="section-feedback__box2--info">
+          Our Business Plan is a written document describing a company's core
+          business activites, Objectives, and how it plans to achieve its goals.
+          Our goal is to provide our client high quality Product with modern
+          idea accordingly their budgets and according thir reuirements..
+        </div>
+        <div class="section-feedback__box2--blue_shape"></div>
+      </div>
     </section>
     <section class="section-contact" id="section-contact">
       Subscribe Newsletter
@@ -159,8 +189,24 @@
 </template>
 
 <script>
+import { ref } from "vue";
 export default {
   name: "App",
+  setup() {
+    const is_playing = ref(false);
+
+    const playVideo = () => {
+      const video = document.getElementById("video");
+      video.controls = true;
+      video.play();
+      is_playing.value = true;
+    };
+
+    return {
+      is_playing,
+      playVideo,
+    };
+  },
 };
 </script>
 

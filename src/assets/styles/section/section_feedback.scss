@@ -1,0 +1,119 @@
+.section-feedback {
+    padding: 4em 0 0 4.25em;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    height: auto;
+
+    &__box1 {
+        position: relative;
+        max-width: 50%;
+
+        #video {
+            object-fit: cover;
+            border-radius: 32px;
+        }
+
+        &--button {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-80%, -50%);
+            background-color: #2639ED;
+            width: 78px;
+            height: 78px;
+            border: 0;
+            border-radius: 100%;
+            cursor: pointer;
+
+            &-play {
+                display: inline-block;
+                width: 0;
+                height: 0;
+                transform: translate(5px, 2px);
+                border-left: 20px solid #ffffff;
+                border-top: 15px solid transparent;
+                border-bottom: 15px solid transparent;
+            }
+
+            &:hover,
+            :focus {
+                animation: pulse 1s;
+                box-shadow: 0 0 0 1em transparent;
+            }
+
+            @keyframes pulse {
+                0% {
+                    box-shadow: 0 0 0 0 #5566fa;
+                }
+            }
+        }
+
+        &--orange_shape {
+            position: absolute;
+            bottom: -65px;
+            right: -65px;
+            z-index: -100;
+            width: 130px;
+            height: 130px;
+            background: #FFF5DB;
+            border-radius: 100%;
+        }
+    }
+
+    &__box2 {
+        max-width: 50%;
+        padding: 0 60px;
+        position: relative;
+
+        &--title {
+            font-size: 2em;
+        }
+
+        &--info {
+            font-size: 1em;
+            color: #565656;
+            padding: 18px 0;
+        }
+
+        &--blue_shape {
+            position: absolute;
+            top: -30px;
+            left: 10px;
+            z-index: -1;
+            width: 178px;
+            height: 178px;
+            background: #EFF1FF;
+            border-radius: 0px 0px 100px 0px;
+        }
+    }
+
+    @media (max-width: 1400px) {
+        & {
+            flex-direction: column;
+
+            &__box1 {
+                max-width: none;
+
+                #video {
+                    max-width: 90%;
+                }
+            }
+            
+            &__box2 {
+                max-width: none;
+
+                &--title {
+                    padding-top: 50px;
+                }
+
+                &--blue_shape {
+                    top: 20px;
+                    left: 10px;
+                }
+            }
+        }
+    }
+}
