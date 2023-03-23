@@ -66,7 +66,7 @@
 
     &__box2 {
         width: 50%;
-
+        position: relative;
 
         &--img {
             width: 100%;
@@ -74,6 +74,17 @@
             max-height: 500px;
             z-index: 1000;
             position: relative;
+        }
+
+        &--orange-shape {
+            z-index: -1;
+            background-color: #FFF5DB;
+            height: 250px;
+            width: 178px;
+            position: absolute;
+            bottom: 0px;
+            right: 120px;
+            border-radius: 0 0 100px 0;
         }
     }
 
