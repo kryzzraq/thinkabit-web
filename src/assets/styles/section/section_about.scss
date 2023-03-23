@@ -45,9 +45,15 @@
             padding-top: 40px;
             padding-bottom: 30px;
 
+            transition: 1s;
+
             &-4,
             &-2 {
                 transform: translateY(-109px);
+
+                &:hover {
+                    transform: translateY(-129px) !important;
+                }
             }
 
             &--shape {
@@ -85,6 +91,10 @@
                 color: #757575;
                 font-size: 16px;
                 padding: 0 31px;
+            }
+
+            &:hover {
+                transform: translateY(-20px);
             }
         }
 
@@ -144,6 +154,10 @@
                 &--detail-4,
                 &--detail-2 {
                     transform: translateY(0px);
+
+                    &:hover {
+                        transform: translateY(-20px) !important;
+                    }
                 }
             }
 

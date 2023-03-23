@@ -27,7 +27,9 @@
           build readymade websites, mobile applications, and elaborate online
           business services.
         </div>
-        <button class="section-home__box1--button">Contact Now</button>
+        <button class="section-home__box1--button">
+          <a href="#section-contact">Contact Now</a>
+        </button>
         <img
           class="section-home__box1--dots_ornament"
           src="./assets/images/ornaments/grey-dots.png"
@@ -139,15 +141,19 @@
         </div>
         <div class="section-about__box2--pink_shape"></div>
       </div>
-      <div  class="section-about--orange_shape"></div>
+      <div class="section-about--orange_shape"></div>
       <div class="section-about--blue_shape"></div>
       <img
         class="section-about--dots_ornament"
         src="./assets/images/ornaments/blue-dots.png"
       />
     </section>
-    <section class="section-feedback" id="section-feedback">What our happy client say</section>
-    <section class="section-contact" id="section-contact">Subscribe Newsletter</section>
+    <section class="section-feedback" id="section-feedback">
+      What our happy client say
+    </section>
+    <section class="section-contact" id="section-contact">
+      Subscribe Newsletter
+    </section>
   </main>
   <footer>Footer</footer>
 </template>

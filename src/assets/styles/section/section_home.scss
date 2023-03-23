@@ -32,6 +32,11 @@
             cursor: pointer;
             z-index: 1000;
 
+            a {
+                color: white;
+                text-decoration: none;
+            }
+
             &:hover,
             :focus {
                 animation: pulse 1s;
