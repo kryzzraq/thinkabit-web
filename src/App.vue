@@ -20,21 +20,29 @@
   </header>
   <main>
     <section class="section-home">
-      <div>
-        <h2> A Digital Product Agency</h2>
-        <div>
-          Leading digital agency with solid design and development expertise. We build readymade websites, mobile applications, and elaborate online business services.
+      <div class="section-home__box1">
+        <h1 class="section-home__box1--title">A Digital Product Agency</h1>
+        <div class="section-home__box1--info">
+          Leading digital agency with solid design and development expertise. We
+          build readymade websites, mobile applications, and elaborate online
+          business services.
         </div>
-        <button>
-          Contact Now
-        </button>
+        <button class="section-home__box1--button">Contact Now</button>
+        <img
+          class="section-home__box1--dots_ornament"
+          src="./assets/images/ornaments/grey-dots.png"
+        />
+        <div class="section-home__box1--blue-circle"></div>
+
       </div>
-      <div>
-        <img src="./assets/images/people/briefing2.jpg"
-        alt="briefing"
-      />
+      <div class="section-home__box2">
+        <img
+          src="./assets/images/people/briefing2.jpg"
+          alt="briefing"
+          class="section-home__box2--img"
+        />
       </div>
-     </section>
+    </section>
     <section class="section-client">Our Client</section>
     <section class="section-about">How can we help your Business ?</section>
     <section class="section-feedback">What our happy client say</section>
