@@ -220,18 +220,116 @@
       </div>
     </section>
     <section class="section-contact" id="section-contact">
-      Subscribe Newsletter
+      <contact-now v-model="value" />
+      <div>{{value}}</div>
     </section>
   </main>
-  <footer>Footer</footer>
+  <footer class="footer">
+    <div class="footer__main">
+      <div class="footer__main__info">
+        <img
+          src="./assets/images/icons/thinkabit-logo.png"
+          alt="thinkabit-logo"
+          class="footer__main__info--title"
+        />
+        <div class="footer__main__info--info">
+          Leading digital agency with solid design and development expertise. We
+          build readymade websites, mobile applications, and elaborate online
+          business services.
+        </div>
+        <div>
+          <img
+            src="./assets/images/icons/twitter-logo.png"
+            alt="twitter-logo"
+            class="footer__main__info--logo footer__main__info--logo--twitter"
+          />
+          <img
+            src="./assets/images/icons/linked-in-logo.png"
+            alt="linked-in-logo"
+            class="footer__main__info--logo footer__main__info--logo--linkedin"
+          />
+        </div>
+      </div>
+      <div class="footer__main__links--container">
+        <div class="footer__main__links">
+          <h5 class="footer__main__links--title">What We Do</h5>
+          <ul class="footer__main__links--list">
+            <li>
+              <a href="https://www.thinkabit.es/" target="_blank">Web Design</a>
+            </li>
+            <li>
+              <a href="https://www.thinkabit.es/" target="_blank">App Design</a>
+            </li>
+            <li>
+              <a href="https://www.thinkabit.es/" target="_blank"
+                >Social Media Manage</a
+              >
+            </li>
+            <li>
+              <a href="https://www.thinkabit.es/" target="_blank"
+                >Market Analysis Project</a
+              >
+            </li>
+          </ul>
+        </div>
+        <div class="footer__main__links">
+          <h5 class="footer__main__links--title">Company</h5>
+          <ul class="footer__main__links--list">
+            <li>
+              <a href="https://www.thinkabit.es/" target="_blank">About Us</a>
+            </li>
+            <li>
+              <a href="https://www.thinkabit.es/" target="_blank">Career</a>
+            </li>
+            <li>
+              <a href="https://www.thinkabit.es/" target="_blank"
+                >Become Investor</a
+              >
+            </li>
+          </ul>
+        </div>
+        <div class="footer__main__links">
+          <h5 class="footer__main__links--title">Support</h5>
+          <ul class="footer__main__links--list">
+            <li><a href="https://www.thinkabit.es/" target="_blank">FAQ</a></li>
+            <li>
+              <a href="https://www.thinkabit.es/" target="_blank">Policy</a>
+            </li>
+            <li>
+              <a href="https://www.thinkabit.es/" target="_blank">Business</a>
+            </li>
+          </ul>
+        </div>
+        <div class="footer__main__links">
+          <h5 class="footer__main__links--title">Contact</h5>
+          <ul class="footer__main__links--list">
+            <li>
+              <a href="https://www.thinkabit.es/" target="_blank">WhatsApp</a>
+            </li>
+            <li>
+              <a href="https://www.thinkabit.es/" target="_blank">Support 24</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="footer__copyright">Copyright © 2023 Thinkabit</div>
+  </footer>
 </template>
 
 <script>
 import { ref } from "vue";
+import contactNow from "@/components/ContactNow.vue";
+
 export default {
   name: "App",
+  components: {
+    contactNow,
+  },
   setup() {
     const is_playing = ref(false);
+
+    const value = ref("");
 
     const playVideo = () => {
       const video = document.getElementById("video");
@@ -243,6 +341,7 @@ export default {
     return {
       is_playing,
       playVideo,
+      value,
     };
   },
 };

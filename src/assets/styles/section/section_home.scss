@@ -119,3 +119,17 @@
         }
     }
 }
+
+@media (max-width: 600px) {
+    .section-home {
+        padding-left: 30px !important;
+        padding-top: 20px !important;
+
+
+        &__box1{
+            padding-left: 0 !important;
+            padding-top: 20px !important;
+        }
+}
+    }
+    

@@ -11,6 +11,7 @@
 
         &--header {
             text-align: center;
+
             &--title {
                 font-size: 2.5em;
             }
@@ -28,7 +29,7 @@
             &--1 {
                 position: relative;
 
-                &--photo{
+                &--photo {
                     max-width: 400px;
                     border-radius: 300px 0 300px 300px;
                     filter: drop-shadow(10px 20px 50px rgba(0, 0, 0, 0.15));
@@ -39,11 +40,11 @@
                     bottom: 0px;
                     left: 0;
                     z-index: -4;
-        
+
                     border: 8px solid #FF007A;
                     width: 120px;
                     height: 120px;
-                    border-radius: 100%;            
+                    border-radius: 100%;
                 }
 
                 &--dots_ornaments {
@@ -51,14 +52,14 @@
                     top: -40px;
                     right: -40px;
                     z-index: -4;
-        
+
                 }
             }
 
             &--2 {
                 padding: 70px 30px 0 60px;
 
-                &--title{
+                &--title {
                     font-size: 24px;
                 }
 
@@ -73,7 +74,7 @@
                 padding: 0 70px 0 50px;
                 position: relative;
 
-                &--orange_shape{
+                &--orange_shape {
                     position: absolute;
                     bottom: 115px;
                     left: 70px;
@@ -86,5 +87,51 @@
                 }
             }
         }
+    }
+
+    @media (max-width: 1280px) {
+        .section-people__box1 {
+            width: 100%;
+        }
+
+        .section-people__box1--content {
+            flex-direction: column;
+
+            &--1 {
+                align-self: start;
+            }
+
+            &--2 {
+                padding: 70px 30px;
+                max-width: 600px;
+                align-self: center;
+            }
+
+            &--3 {
+                align-self: end;
+
+            }
+        }
+    }
+
+
+}
+
+@media (max-width: 600px) {
+
+    .section-people__box1--content--1,
+    .section-people__box1--content--2,
+    .section-people__box1--content--3 {
+        align-self: center;
+
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+
+    }
+
+    .section-people {
+        padding-left: 30px !important;
+        padding-top: 20px !important;
+
     }
 }

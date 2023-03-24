@@ -1,0 +1,106 @@
+.footer {
+    margin: 0 0 0 120px;
+
+    &__main {
+        padding: 60px 0 30px 0;
+        border-top: 1px solid #E4E4E4;
+        border-bottom: 1px solid #F1F1F1;
+        display: flex;
+        flex-wrap: wrap;
+
+        &__info {
+            flex-basis: 260px;
+
+            &--info {
+                padding: 30px 0 40px 0;
+                font-size: 14px;
+                color: #565656;
+                max-width: 400px;
+
+            }
+
+            &--logo {
+                margin-right: 16px;
+            }
+        }
+
+        &__links {
+            padding: 0 50px;
+
+            &--container {
+                margin: 10px 0;
+                display: flex;
+
+            }
+
+            &--title {
+                font-size: 20px;
+            }
+
+            &--list {
+                padding: 0;
+                padding-top: 22px;
+                font-size: 14px;
+                list-style: none;
+                margin: 0 !important;
+
+                li {
+                    margin: 10px 0;
+
+                    a {
+                        text-decoration: none;
+                        color: black;
+
+                        &:hover {
+                            color: #2639ED;
+                        }
+                    }
+
+                    &:first-of-type {
+                        margin: 0;
+                    }
+                }
+
+
+            }
+        }
+    }
+
+    &__copyright {
+        text-align: center;
+        padding: 20px 0;
+        font-size: 14px;
+        color: #A4A4A4;
+    }
+
+    @media (max-width: 1208px) {
+        .footer__main__info {
+            flex-basis: inherit;
+
+            &--info {
+                max-width: none;
+            }
+        }
+
+        .footer__main__links {
+            padding-top: 30px;
+            padding-left: 0;
+            min-width: 200px;
+
+            &:first-of-type {
+                
+            }
+
+            &--container {
+                display: flex;
+            flex-wrap: wrap;
+            }
+        }
+    }
+}
+
+@media (max-width: 800px) {
+    footer {
+        margin-left: 30px !important ;
+    }
+}
