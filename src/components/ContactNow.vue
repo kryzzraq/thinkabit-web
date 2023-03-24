@@ -56,7 +56,7 @@ export default {
   emits: ["update:modelValue", "updateEmailInput"],
 
   setup(props) {
-    const showModal = ref(true);
+    const showModal = ref(false);
     const sendRequest = () => {
       axios
         .post(
