@@ -58,7 +58,7 @@ export default {
   setup(props) {
     const showModal = ref(false);
     const sendRequest = () => {
-        // eslint-disable-next-line
+      // eslint-disable-next-line
       const regex = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
       if (props.modelValue != "" && props.modelValue.match(regex)) {
         axios
