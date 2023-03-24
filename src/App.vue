@@ -221,7 +221,6 @@
     </section>
     <section class="section-contact" id="section-contact">
       <contact-now v-model="value" />
-      <div>{{value}}</div>
     </section>
   </main>
   <footer class="footer">

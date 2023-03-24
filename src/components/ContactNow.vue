@@ -58,29 +58,33 @@ export default {
   setup(props) {
     const showModal = ref(false);
     const sendRequest = () => {
-      axios
-        .post(
-          "https://1a3bdf42-30a3-4c04-bfd4-f1886cc11ae3.mock.pstmn.io/email/send",
-          {
-            email: props.modelValue,
-          }
-        )
-        .then((response) => {
-          console.log(response);
+        // eslint-disable-next-line
+      const regex = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+      if (props.modelValue != "" && props.modelValue.match(regex)) {
+        axios
+          .post(
+            "https://1a3bdf42-30a3-4c04-bfd4-f1886cc11ae3.mock.pstmn.io/email/send",
+            {
+              email: props.modelValue,
+            }
+          )
+          .then((response) => {
+            console.log(response);
 
-          if (response.status === 200) {
-            console.log("El email se ha enviado correctamente");
-            showModal.value = true;
+            if (response.status === 200) {
+              console.log("El email se ha enviado correctamente");
+              showModal.value = true;
 
-            setTimeout(() => {
-              showModal.value = false;
-            }, 3000);
-          }
-        });
+              setTimeout(() => {
+                showModal.value = false;
+              }, 3000);
+            }
+          });
+      }
     };
     const closeModal = () => {
-        showModal.value = false;
-    }
+      showModal.value = false;
+    };
     return {
       sendRequest,
       showModal,
