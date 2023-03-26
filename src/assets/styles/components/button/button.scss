@@ -1,0 +1,22 @@
+.primary_button {
+    font-size: 16px;
+    background-color: #2639ed;
+    color: white;
+    height: 60px;
+    width: 187px;
+    border: 0;
+    border-radius: 60px;
+    cursor: pointer;
+
+    &:hover,
+    :focus {
+      animation: pulse 1s;
+      box-shadow: 0 0 0 1em transparent;
+    }
+
+    @keyframes pulse {
+      0% {
+        box-shadow: 0 0 0 0 #5566fa;
+      }
+    }
+  }

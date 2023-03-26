@@ -15,7 +15,10 @@
           :value="modelValue"
           @input="$emit('update:modelValue', $event.target.value)"
         />
-        <button class="contact_now--box2--button" @click="sendRequest()">
+        <button
+          class="contact_now--box2--button primary_button"
+          @click="$emit('subscribe-newsletter')"
+        >
           Contact Now
         </button>
       </div>
@@ -26,25 +29,10 @@
       src="../assets/images/ornaments/blue-dots-small.png"
     />
     <div class="contact_now__shapes--container--orange-shape"></div>
-
-    <div class="modal" v-if="showModal">
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="modal-body">
-            <p>El email se ha enviado correctamente</p>
-          </div>
-          <div class="modal-footer">
-            <button type="button" @click="closeModal()">Close</button>
-          </div>
-        </div>
-      </div>
-    </div>
   </div>
 </template>
 
 <script>
-import axios from "axios";
-import { ref } from "vue";
 export default {
   components: {},
   props: {
@@ -53,43 +41,10 @@ export default {
       default: "",
     },
   },
-  emits: ["update:modelValue", "updateEmailInput"],
+  emits: ["update:modelValue", "updateEmailInput", "subscribe-newsletter"],
 
-  setup(props) {
-    const showModal = ref(false);
-    const sendRequest = () => {
-      // eslint-disable-next-line
-      const regex = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
-      if (props.modelValue != "" && props.modelValue.match(regex)) {
-        axios
-          .post(
-            "https://1a3bdf42-30a3-4c04-bfd4-f1886cc11ae3.mock.pstmn.io/email/send",
-            {
-              email: props.modelValue,
-            }
-          )
-          .then((response) => {
-            console.log(response);
-
-            if (response.status === 200) {
-              console.log("El email se ha enviado correctamente");
-              showModal.value = true;
-
-              setTimeout(() => {
-                showModal.value = false;
-              }, 3000);
-            }
-          });
-      }
-    };
-    const closeModal = () => {
-      showModal.value = false;
-    };
-    return {
-      sendRequest,
-      showModal,
-      closeModal,
-    };
+  setup() {
+    return {};
   },
 };
 </script>

@@ -23,31 +23,12 @@
         }
 
         &--button {
-            padding: 1em 2em;
-            border-radius: 3.75em;
-            color: white;
-            background-color: #2639ED;
-            font-size: 1.25em;
-            border: none;
-            cursor: pointer;
-            z-index: 1000;
 
             a {
                 color: white;
                 text-decoration: none;
             }
 
-            &:hover,
-            :focus {
-                animation: pulse 1s;
-                box-shadow: 0 0 0 1em transparent;
-            }
-
-            @keyframes pulse {
-                0% {
-                    box-shadow: 0 0 0 0 #5566fa;
-                }
-            }
         }
 
         &--dots_ornament {
@@ -98,7 +79,8 @@
         & {
             flex-direction: column;
 
-            &__box1, &__box2 {
+            &__box1,
+            &__box2 {
                 width: 100%;
                 padding-bottom: 100px;
             }
@@ -109,7 +91,7 @@
         }
 
         &__box1--blue-circle {
-            top:auto;
+            top: auto;
             bottom: -65px;
             right: 0;
         }
@@ -126,10 +108,9 @@
         padding-top: 20px !important;
 
 
-        &__box1{
+        &__box1 {
             padding-left: 0 !important;
             padding-top: 20px !important;
         }
-}
     }
-    
+}

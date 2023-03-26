@@ -1,0 +1,25 @@
+
+.modal {
+    background: rgb(255, 255, 255);
+    position: fixed;
+    z-index: 10000;
+    left: 50%;
+    top: 30%;
+    transform: translateX(-50%);
+    box-shadow: 10px 20px 50px rgba(0, 0, 0, 0.5);
+    border-radius: 30px;
+  
+    &-dialog {
+      padding: 30px 60px 10px 60px;
+    }
+  
+    &-body {
+      padding-top: 20px;
+      font-size: 20px;
+    }
+  
+    &-footer {
+      padding-top: 50px;
+      text-align: end;
+    }
+  }

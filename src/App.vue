@@ -27,7 +27,7 @@
           build readymade websites, mobile applications, and elaborate online
           business services.
         </div>
-        <button class="section-home__box1--button">
+        <button class="section-home__box1--button primary_button">
           <a href="#section-contact">Contact Now</a>
         </button>
         <img
@@ -159,7 +159,7 @@
           poster="./assets/images/people/briefing1.jpg"
         ></video>
         <button
-          class="section-feedback__box1--button"
+          class="section-feedback__box1--button primary_button"
           v-if="!is_playing"
           @click="playVideo()"
         >
@@ -220,7 +220,10 @@
       </div>
     </section>
     <section class="section-contact" id="section-contact">
-      <contact-now v-model="value" />
+      <contact-now
+        v-model="emailValue"
+        v-on:subscribeNewsletter="sendRequest()"
+      />
     </section>
   </main>
   <footer class="footer">
@@ -314,21 +317,34 @@
     </div>
     <div class="footer__copyright">Copyright © 2023 Thinkabit</div>
   </footer>
+  <modal v-if="showModal">
+    <template #body> El email se ha enviado correctamente </template>
+    <template #footer>
+      <button type="button" @click="closeModal()" class="primary_button">
+        Close
+      </button>
+    </template>
+  </modal>
 </template>
 
 <script>
 import { ref } from "vue";
+import axios from "axios";
 import contactNow from "@/components/ContactNow.vue";
+import modal from "@/components/Modal.vue";
 
 export default {
   name: "App",
   components: {
     contactNow,
+    modal,
   },
   setup() {
     const is_playing = ref(false);
 
-    const value = ref("");
+    const emailValue = ref("");
+
+    const showModal = ref(false);
 
     const playVideo = () => {
       const video = document.getElementById("video");
@@ -337,10 +353,43 @@ export default {
       is_playing.value = true;
     };
 
+    const closeModal = () => {
+      showModal.value = false;
+    };
+
+    const sendRequest = () => {
+      // eslint-disable-next-line
+      const regex = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+      if (emailValue.value != "" && emailValue.value.match(regex)) {
+        axios
+          .post(
+            "https://1a3bdf42-30a3-4c04-bfd4-f1886cc11ae3.mock.pstmn.io/email/send",
+            {
+              email: emailValue.value,
+            }
+          )
+          .then((response) => {
+            console.log(response);
+
+            if (response.status === 200) {
+              console.log("El email se ha enviado correctamente");
+
+              showModal.value = true;
+              setTimeout(() => {
+                showModal.value = false;
+              }, 3000);
+            }
+          });
+      }
+    };
+
     return {
       is_playing,
       playVideo,
-      value,
+      emailValue,
+      showModal,
+      sendRequest,
+      closeModal,
     };
   },
 };
